@@ -1,13 +1,21 @@
 function firstChar(text) {
   // your code here
-	let char=text.trim().charAt(0);
+	 let i = 0;
 
+    while (i < text.length && text[i] === ' ') {
+        i++;
+    }
 
-	return char;
+    if (i === text.length) {
+        return '';
+    }
+
+    return text[i];
 }
 
 // Do not change the code below
 
+
 //Uncomment the following line to show the prompt popup
-// const text = prompt("Enter text:");
+const text = prompt("Enter text:");
 alert(firstChar(text));
